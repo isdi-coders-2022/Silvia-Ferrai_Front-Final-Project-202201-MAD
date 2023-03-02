@@ -6,7 +6,7 @@ export interface ArticleI {
 }
 
 export interface ItemI {
-    id: string;
+    _id: string;
     uds: number;
     article: ArticleI;
 }

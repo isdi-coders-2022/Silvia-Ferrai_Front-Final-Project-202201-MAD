@@ -40,7 +40,7 @@ function Header() {
         if (user.isLogged) {
             dispatch(actions.logout());
         } else {
-            setShowLogin(true);
+            setShowLogin(!showLogin);
         }
     };
 
@@ -57,7 +57,7 @@ function Header() {
                         onKeyPress={handleLogin}
                         onClick={handleLogin}
                     >
-                        {user.isLogged ? 'Logout' : 'Login'}
+                        {showLogin ? 'Logout' : 'Login'}
                     </div>
                 </Link>
             )}
