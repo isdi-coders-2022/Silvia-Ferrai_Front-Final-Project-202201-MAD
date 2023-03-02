@@ -10,6 +10,7 @@
     justify-content: space-between;
     width: 45vw;
     background-color: rgba(239, 184, 102, 1);
+    font-size: 14px;
     &__elements {
         border-right: 1px dotted black;
         display: flex;
@@ -56,9 +57,9 @@
     justify-content: space-between;
     width: 100%;
     font-size: 1.5rem;
-    padding: 10px;
+    padding: 14px;
     background-color: rgba(239, 184, 102, 1);
-    // padding-bottom: 50px;
+    font-size: 18px;
     font-weight: bold;
 }
 .container-grid {
@@ -194,13 +195,14 @@
     padding: 20px;
     border-radius: 4px;
     max-width: 300px;
-    height: 150px;
+    height: 250px;
     font-weight: 700;
 }
 .modal-content > a {
-    margin-top: 20px;
+    margin-top: 40px;
     text-decoration: none;
     color: black;
     background-color: rgb(225, 180, 30);
-    padding: 5px;
+    padding: 7px;
+    border-radius: 10px;
 }

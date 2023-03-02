@@ -1,12 +1,12 @@
 .home {
-    // height: 100vh;
+    height: 100vh;
     &__add {
         display: flex;
         flex-direction: column;
         justify-content: center;
         background-color: rgba(235, 120, 70, 1);
         width: 10vw;
-        // height: 10vw;
+        cursor: pointer;
         align-items: center;
         padding: 14px;
         border-end-start-radius: 30px;
