@@ -1,10 +1,8 @@
-.kitchen-container {
-    height: 89vw;
-}
+// .kitchen-container {
+//     height: 100vw;
+// }
 .tables-container {
     display: flex;
-    width: 100vw;
-    height: 100vh;
     font-size: 1.5rem;
     font-weight: 700;
     flex-wrap: wrap;
@@ -13,9 +11,8 @@
 .tables {
     display: flex;
     flex-direction: column;
-    height: 45%;
     margin: 20px;
-
+    font-size: 16px;
     border: 1px solid black;
     background-color: antiquewhite;
     &__elements {
@@ -29,6 +26,6 @@
 }
 .title {
     padding: 20px;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
 }
