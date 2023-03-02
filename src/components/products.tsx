@@ -1,14 +1,29 @@
+/* eslint-disable react/no-unstable-nested-components */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-noninteractive-element-to-interactive-role */
 /* eslint-disable no-shadow */
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { loadProducts } from '../redux/products/actionCreators';
 import { RootState } from '../redux/store';
 import { updateProductIntoTicket } from '../redux/ticket/actionCreator';
 import { ArticleI } from '../interfaces/ticket';
+
+function Modal() {
+    return (
+        <div className="modal">
+            <div className="modal-content">
+                <p>
+                    Para modificar o añadir un nuevo ticket tienes que hacer el
+                    login!
+                </p>
+                <Link to="/login">Login</Link>
+            </div>
+        </div>
+    );
+}
 
 function Products() {
     const product = useSelector((state: RootState) => state.product);
@@ -36,6 +51,7 @@ function Products() {
     return (
         <>
             <div className="types">
+                {!user.token && <Modal />}
                 <div style={{ margin: '0 10px 10px 0' }}>
                     <img
                         className="image"
@@ -140,9 +156,9 @@ function Products() {
                         alt="cerveza"
                         role="button"
                         tabIndex={0}
-                        onKeyPress={() => {
-                            filterProduct('cerveza');
-                        }}
+                        // onKeyPress={() => {
+                        //     filterProduct('cerveza');
+                        // }}
                         onClick={() => {
                             filterProduct('cerveza');
                         }}
@@ -155,6 +171,7 @@ function Products() {
                 {itemProduct.length &&
                     itemProduct.map((el: ArticleI) => (
                         <li
+                            key={el.id}
                             className="products__item"
                             onClick={() => updateTicket(el.id)}
                         >

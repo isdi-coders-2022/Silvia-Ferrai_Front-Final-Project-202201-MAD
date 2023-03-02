@@ -21,7 +21,7 @@ const weekDay = [
 function Header() {
     const [currentTime, setCurrentTime] = useState<string>('');
     const user = useSelector((state: RootState) => state.user);
-    const [showLogin, setShowLogin] = useState(false);
+    const [showLogin, setShowLogin] = useState(true);
 
     const dispatch = useDispatch();
 
@@ -48,7 +48,7 @@ function Header() {
         <div className="header-container">
             <h1 className="header-title">ECCO tpv</h1>
             <p className="time-header">{currentTime}</p>
-            {!showLogin && (
+            {!user.isLogged ? (
                 <Link to="/login" className="link-login">
                     <div
                         className="link-login"
@@ -57,7 +57,19 @@ function Header() {
                         onKeyPress={handleLogin}
                         onClick={handleLogin}
                     >
-                        {showLogin ? 'Logout' : 'Login'}
+                        Login
+                    </div>
+                </Link>
+            ) : (
+                <Link to="/login" className="link-login">
+                    <div
+                        className="link-login"
+                        tabIndex={0}
+                        role="button"
+                        onClick={handleLogin}
+                        onKeyPress={handleLogin}
+                    >
+                        Logout
                     </div>
                 </Link>
             )}

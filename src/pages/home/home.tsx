@@ -41,13 +41,15 @@ function Home() {
     return (
         <div className="home">
             <div className="home-table">
-                <div className="home__add">
+                <div
+                    role="button"
+                    className="home__add"
+                    onClick={createTicket}
+                    onKeyPress={createTicket}
+                    tabIndex={0}
+                >
                     <FontAwesomeIcon
                         className="home__icon"
-                        role="button"
-                        tabIndex={0}
-                        onClick={createTicket}
-                        onKeyPress={createTicket}
                         icon={faCirclePlus}
                     />
 
