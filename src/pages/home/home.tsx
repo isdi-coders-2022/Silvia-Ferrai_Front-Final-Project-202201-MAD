@@ -54,7 +54,7 @@ function Home() {
                     <p className="home__add home__add--table"> NUEVA MESA</p>
                 </div>
             </div>
-            <ul className="home__list" style={{ listStyleType: 'none' }}>
+            <ul className="home__list">
                 {ticket.length &&
                     ticket.map((item: TicketI, index: number) => (
                         <li key={item._id} className="home__list--block">

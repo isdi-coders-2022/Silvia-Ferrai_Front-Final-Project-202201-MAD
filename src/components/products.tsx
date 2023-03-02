@@ -36,7 +36,7 @@ function Products() {
     return (
         <>
             <div className="types">
-                <div>
+                <div style={{ margin: '0 10px 10px 0' }}>
                     <img
                         className="image"
                         src="https://firebasestorage.googleapis.com/v0/b/ecco-cfc75.appspot.com/o/kawaii-pizza.jpg?alt=media&token=27fcecf4-e97c-42c4-af85-e10674470f13"
@@ -52,7 +52,7 @@ function Products() {
                     />
                     <p className="types__name">PIZZA</p>
                 </div>
-                <div>
+                <div style={{ margin: '0 10px 10px 0' }}>
                     <img
                         className="image"
                         src="https://firebasestorage.googleapis.com/v0/b/ecco-cfc75.appspot.com/o/emsalada2.jpg?alt=media&token=808356f5-7d61-4e80-8a17-94dc03b3cde7"
@@ -68,7 +68,7 @@ function Products() {
                     />
                     <p className="types__name">ENSALADA</p>
                 </div>
-                <div>
+                <div style={{ margin: '0 10px 10px 0' }}>
                     <img
                         className="image"
                         src="https://firebasestorage.googleapis.com/v0/b/ecco-cfc75.appspot.com/o/postre.jpg?alt=media&token=ce32a835-a104-4340-a7fa-597dd2aad005"
@@ -84,7 +84,7 @@ function Products() {
                     />
                     <p className="types__name">POSTRE</p>
                 </div>
-                <div>
+                <div style={{ margin: '0 10px 10px 0' }}>
                     <img
                         className="image"
                         src="https://firebasestorage.googleapis.com/v0/b/ecco-cfc75.appspot.com/o/caffe.jpg?alt=media&token=533b5251-ef2c-4bc9-ad28-05bdf73f44f3"
@@ -101,7 +101,7 @@ function Products() {
 
                     <div className="types__name"> CAFÉ</div>
                 </div>
-                <div>
+                <div style={{ margin: '0 10px 10px 0' }}>
                     <img
                         className="image"
                         src="https://firebasestorage.googleapis.com/v0/b/ecco-cfc75.appspot.com/o/refresco.jpg?alt=media&token=e5f9052b-151e-483f-8d7d-b30dd8e30cfa"
@@ -117,7 +117,7 @@ function Products() {
                     />
                     <div className="types__name">REFRESCO</div>
                 </div>
-                <div>
+                <div style={{ margin: '0 10px 10px 0' }}>
                     <img
                         className="image"
                         src="https://firebasestorage.googleapis.com/v0/b/ecco-cfc75.appspot.com/o/vino-bottle.jpg?alt=media&token=200fa322-c2af-4d8b-af12-a10c39f6994f"
@@ -133,7 +133,7 @@ function Products() {
                     />
                     <div className="types__name">VINO</div>
                 </div>
-                <div>
+                <div style={{ margin: '0 10px 10px 0' }}>
                     <img
                         className="image"
                         src="https://firebasestorage.googleapis.com/v0/b/ecco-cfc75.appspot.com/o/cerveza-bottle.jpg?alt=media&token=93e3be7e-f566-4030-ba8b-3f1013638386"
@@ -154,14 +154,12 @@ function Products() {
             <ul className="products">
                 {itemProduct.length &&
                     itemProduct.map((el: ArticleI) => (
-                        <div key={el.id}>
-                            <li
-                                className="products__item"
-                                onClick={() => updateTicket(el.id)}
-                            >
-                                {el.item}
-                            </li>
-                        </div>
+                        <li
+                            className="products__item"
+                            onClick={() => updateTicket(el.id)}
+                        >
+                            {el.item}
+                        </li>
                     ))}
             </ul>
         </>

@@ -23,6 +23,7 @@
         text-decoration: none;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        list-style-type: none;
         //  grid-auto-rows: 6rem;
         &--table-pic {
             width: 125px;
