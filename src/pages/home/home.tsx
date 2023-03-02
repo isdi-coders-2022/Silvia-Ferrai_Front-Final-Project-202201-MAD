@@ -54,23 +54,21 @@ function Home() {
                     <p className="home__add home__add--table"> NUEVA MESA</p>
                 </div>
             </div>
-            <ul className="home__list">
+            <ul className="home__list" style={{ listStyleType: 'none' }}>
                 {ticket.length &&
                     ticket.map((item: TicketI, index: number) => (
-                        <Link
-                            key={item._id}
-                            className="home__list--block"
-                            to={`/ticket/${item._id}`}
-                        >
-                            <img
-                                className="home__list--table-pic"
-                                src="./assets/413141-PDTI1J-153.png"
-                                alt="table"
-                            />
-                            <li className="home__list home__list--table">
-                                MESA {index + 1}
-                            </li>
-                        </Link>
+                        <li key={item._id} className="home__list--block">
+                            <Link to={`/ticket/${item._id}`}>
+                                <img
+                                    className="home__list--table-pic"
+                                    src="./assets/413141-PDTI1J-153.png"
+                                    alt="table"
+                                />
+                                <p className="home__list home__list--table">
+                                    MESA {index + 1}
+                                </p>
+                            </Link>
+                        </li>
                     ))}
             </ul>
         </div>

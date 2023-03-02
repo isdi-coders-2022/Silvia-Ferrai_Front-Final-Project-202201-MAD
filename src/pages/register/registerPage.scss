@@ -1,14 +1,14 @@
 .container-reg {
-    margin: 50px;
-    padding: 100px;
+    margin: 23px;
+    padding: 25px;
     border-radius: 10vh;
     background-color: rgb(252, 159, 19);
 
     &__register {
-        font-size: 35px;
+        font-size: 25px;
     }
     &__option {
-        font-size: 35px;
+        font-size: 25px;
     }
     &__question {
         font-size: 20px;
@@ -34,17 +34,17 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 150px;
+
         &--sala,
         &--cocina {
-            font-size: 25px;
+            font-size: 18px;
         }
     }
     &__select {
         padding: 10px;
-        margin: 18px;
+        margin: 13px;
     }
     &__button {
-        margin-bottom: 70px;
+        margin-bottom: 40px;
     }
 }

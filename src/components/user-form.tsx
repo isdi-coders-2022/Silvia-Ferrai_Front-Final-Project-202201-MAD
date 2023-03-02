@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import * as actionCreators from '../redux/user/actionCreators';
 import { UserI } from '../interfaces/user';
@@ -10,6 +11,7 @@ function UserForm() {
         role: '',
     });
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const handleChange = (ev: any) => {
         setUser({ ...user, [ev.target.name]: ev.target.value });
@@ -18,6 +20,7 @@ function UserForm() {
     const handleSubmit = async (ev: any) => {
         ev.preventDefault();
         dispatch(actionCreators.register(user));
+        navigate('/login');
     };
 
     return (

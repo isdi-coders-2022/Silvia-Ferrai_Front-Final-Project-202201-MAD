@@ -29,7 +29,7 @@ function LoginForm() {
                 className="form-container__username"
                 type="text"
                 name="username"
-                placeholder="Username"
+                placeholder="Sammy"
                 value={setLogin.username}
                 onChange={handleChange}
             />
@@ -38,7 +38,7 @@ function LoginForm() {
                 className="form-container__password"
                 type="password"
                 name="password"
-                placeholder="Password"
+                placeholder="123"
                 value={setLogin.password}
                 onChange={handleChange}
             />
