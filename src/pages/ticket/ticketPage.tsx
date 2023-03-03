@@ -1,5 +1,5 @@
-/* eslint-disable react/no-array-index-key */
 /* eslint-disable no-underscore-dangle */
+
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
@@ -72,7 +72,6 @@ function TicketPage() {
                             {actualTicket &&
                                 actualTicket.items?.length &&
                                 actualTicket.items.map((el: ItemI) => {
-                                    // console.log(actualTicket.items);
                                     const itemsTotalAmount =
                                         el.article.price * el.uds;
                                     commandTotal += +itemsTotalAmount;

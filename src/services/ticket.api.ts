@@ -1,7 +1,8 @@
 import axios, { AxiosResponse } from 'axios';
 import { TicketI } from '../interfaces/ticket';
 
-const TICKET_API = 'http://localhost:3800/ticket/';
+// const TICKET_API = 'http://localhost:3800/ticket/';
+const TICKET_API = 'https://eccotpv-webservice.onrender.com/ticket/';
 
 export function getProducts(): Promise<AxiosResponse> {
     return axios.get(`${TICKET_API}/products`);
